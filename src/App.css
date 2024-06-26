@@ -1,0 +1,380 @@
+*{
+  padding: 0;
+  margin:0;
+}
+
+body{
+  background-color:rgb(17, 16, 16);
+  color:rgb(255,255,255,0.86);
+  font-size: 1.3rem;
+
+}
+
+#home, #skills{
+  padding:5rem ;
+}
+/* #home, #about, #skills, #projects, #contact{
+  padding:5rem ;
+} */
+
+.content-home{
+  margin:1rem;
+  padding: 3.5rem 4rem;
+  box-shadow:  0rem 0 1rem yellow;
+  border-radius: 2rem;
+  /* background-color: rgb(37, 36, 36); */
+  background: #283048;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #5a6062, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2e3132, #10131c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.greet{
+  font-weight: 1000; 
+  margin:2rem;
+}
+.greet span {
+  letter-spacing: 0.5rem;
+  font-size: 3.5rem;
+  display: inline-block;
+  transition: all 0.1s linear;
+  animation: greet-animation infinite;
+}
+
+@keyframes greet-animation{
+  0%, 90% {
+    transform: scale(1);
+    color: rgba(255, 255, 255, 0.86);
+  }
+  100% {
+    transform: scale(1.2);
+    color: yellow;
+  }
+}
+
+.my-name{
+
+  color:rgb(247, 247, 102);
+text-decoration: underline;
+
+}
+
+.my-img{
+  /* height:auto; */
+  margin: 1rem 2rem;
+  width: 50%;
+  border-radius: 1.5rem;
+  filter: grayscale(0.9);
+  transition: all 0.5s ease-in-out;
+}
+
+.my-img:hover{
+  filter: grayscale(0);
+}
+
+.intro{
+  display: flex;
+  align-items: center;
+  gap:2rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  
+  letter-spacing: 0.2rem;
+  margin:2rem 0 0.5rem 0;
+}
+
+
+/* --------------------------css for About page------------------------------------------------ */
+
+#about{
+  /* border:2px solid white; */
+  padding:6rem;
+  box-shadow:  0rem 0 1rem yellow;
+color:rgb(255,255,255,0.8);
+margin:0 6rem;
+letter-spacing: 0.05rem;
+padding-bottom:2rem;
+border-radius:1rem;
+}
+
+.title-about{
+  font-size: 4rem;
+  background-color: black;
+  letter-spacing: 0.9rem;
+  padding:3rem;
+  border-radius: 2rem;
+  margin-right:1rem;
+  box-shadow: 0rem 0 1rem yellow;
+  text-shadow:0rem 0 1rem yellow ;
+}
+
+.some{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-content {
+  text-align: justify;
+}
+
+.line{
+  border:2px solid rgb(205, 197, 197);
+  width:100%;
+}
+ .my-img2{
+ width:35%;
+ /* float: right; */
+ border-radius: 10rem;
+ margin:2rem;
+ animation:image-glow infinite 1.5s linear
+}  
+#about ul{
+  margin-bottom:3rem;
+}
+#about ul li{
+  padding:0.5rem;
+  list-style-type: none ;
+  transition: all 0.3s linear;
+}
+#about ul li:hover{
+  color:rgb(218, 218, 47);
+  transform: scale(1.05);
+}
+
+
+
+@keyframes image-glow{
+  0%{
+    box-shadow: 0 0 0.3rem yellow;
+  }
+
+  50%{
+    box-shadow: 0 0 0.5rem yellow 0 0 0.75rem yellow  ;
+
+  }
+
+  100%{
+    box-shadow: 0 0 1rem yellow, 0 0 2rem yellow;
+  }
+}
+
+
+/* ---------------------------------------css for skills page--------------------------------- */
+.skills-content{
+  padding: 0rem 1rem;
+}
+.title-skills{
+  font-size: 4rem;
+  background-color: black;
+  letter-spacing: 0.9rem;
+  padding:2rem 4rem;
+  border-radius: 2rem;
+  margin-right:1rem;
+  box-shadow: 0rem 0 1rem yellow;
+  text-shadow:0rem 0 1rem yellow ;
+}
+
+.skills ul{
+  font-size: 1.9rem;
+  letter-spacing: 0.5rem;
+  padding:2rem 2rem 0 2rem;
+  margin-bottom:0
+}
+
+.skills ul li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:1rem;
+  border:3px soild yellow;
+}
+
+
+/*------------------------ css for Project page ------------------------------------ */
+
+ 
+#projects{
+  margin: 3rem 6rem;
+  padding:6rem 6rem 2rem 6rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem yellow;
+}
+
+.title-projects{
+  font-size: 3rem;
+  letter-spacing: 0.7rem;
+  text-shadow: 0.2rem 0 0.3rem yellow;
+  text-align: center;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 5rem;
+  width: 100%;
+  max-width: 1200px;
+  color:white;
+}
+
+.project-card {
+  background: #312c2c;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  font-size: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 1rem yellow;
+}
+
+.project-details {
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  animation: fadeIn 2s ease;
+  background-color: rgb(15, 15, 14);
+  box-shadow: inset 0 0 1rem white;
+  /* border:2px solid white; */
+  border-radius: 1rem;
+  padding:1.5rem;
+}
+
+.project-details img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-details p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------------------------------------css for contact page -------------------------------------------*/
+
+
+#contact {
+  text-align: center;
+  padding:3rem ;
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-container h3 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  letter-spacing: 0.7rem;
+  text-shadow: 0 0 1rem yellow;
+}
+
+.contact-container h3::after {
+  content: '';
+  width: 75%;
+  height: 3px;
+  background: yellow;
+  position: absolute;
+  left: 10%;
+  bottom: -10px;
+  border-radius: 2px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  box-shadow: 0rem 0 0.5rem yellow;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+.contact-icon {
+  color:rgb(253, 253, 14);
+}
+
+.contact-link {
+  color: #00aced;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-link:hover {
+  color:yellow;
+  text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+  .contact-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact-item {
+    width: 45%;
+    justify-content: center;
+  }
+}
+
+
+
+
+
+
+
+
+
